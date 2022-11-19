@@ -9,13 +9,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => ClientPageCubit(),
-        child: ClientPage(
-          child: Container(
-            color: Colors.amber.shade100,
-            child: Text("Test"),
-          ),
+      body: ClientPage(
+        child: Container(
+          color: Colors.amber.shade100,
+          child: Text("Test"),
         ),
       ),
     );

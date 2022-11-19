@@ -12,50 +12,53 @@ class ClientPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ClientPageCubit, bool>(
-      builder: (_, menuIsOpened) {
-        return Stack(
-          children: [
-            //
-            //  Menu
-            //
-            AnimatedPositioned(
-              duration: const Duration(
-                milliseconds: 100,
-              ),
-              width: menuIsOpened ? menuOpenedWidth : menuClosedWidth,
-              top: 0,
-              left: 0,
-              bottom: 0,
-              child: Container(
-                color: Colors.amber,
-                child: Center(
-                  child: IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: () {
-                      _.read<ClientPageCubit>().toggleMenu();
-                    },
+    return BlocProvider(
+      create: (context) => ClientPageCubit(),
+      child: BlocBuilder<ClientPageCubit, bool>(
+        builder: (_, menuIsOpened) {
+          return Stack(
+            children: [
+              //
+              //  Menu
+              //
+              AnimatedPositioned(
+                duration: const Duration(
+                  milliseconds: 100,
+                ),
+                width: menuIsOpened ? menuOpenedWidth : menuClosedWidth,
+                top: 0,
+                left: 0,
+                bottom: 0,
+                child: Container(
+                  color: Colors.amber,
+                  child: Center(
+                    child: IconButton(
+                      icon: Icon(Icons.menu),
+                      onPressed: () {
+                        _.read<ClientPageCubit>().toggleMenu();
+                      },
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            //
-            //  Body
-            //
-            AnimatedPositioned(
-              duration: const Duration(
-                milliseconds: 100,
-              ),
-              left: menuIsOpened ? menuOpenedWidth : menuClosedWidth,
-              top: 0,
-              bottom: 0,
-              right: 0,
-              child: child,
-            )
-          ],
-        );
-      },
+              //
+              //  Body
+              //
+              AnimatedPositioned(
+                duration: const Duration(
+                  milliseconds: 100,
+                ),
+                left: menuIsOpened ? menuOpenedWidth : menuClosedWidth,
+                top: 0,
+                bottom: 0,
+                right: 0,
+                child: child,
+              )
+            ],
+          );
+        },
+      ),
     );
   }
 }
