@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ClientPageCubit extends Cubit<bool> {
-  ClientPageCubit() : super(true);
+  ClientPageCubit() : super(false);
 
   bool get isOpened => state;
 
