@@ -6,4 +6,8 @@ A test drive Flutter BLoC project. Use it as a base for your project or as pure 
 
 This project is a starting point for a Flutter application.
 
-```flutter run```
+[Windows Only] Clean the project for getting rid of Windows CMake file issues:
+```flutter clean```
+
+Run the project
+```flutter run -d [DEVICE_NAME]```

@@ -1,4 +1,4 @@
-import 'package:bloc_td/shared/business/client_page_cubit.dart';
+import 'package:flutter_bloc_testdrive/shared/business/client_page_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

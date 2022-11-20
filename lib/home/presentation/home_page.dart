@@ -1,4 +1,4 @@
-import 'package:bloc_td/shared/presentation/client_page.dart';
+import 'package:flutter_bloc_testdrive/shared/presentation/client_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

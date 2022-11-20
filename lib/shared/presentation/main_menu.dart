@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:bloc_td/shared/presentation/menu_button.dart';
+import 'package:flutter_bloc_testdrive/shared/presentation/menu_button.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatelessWidget {

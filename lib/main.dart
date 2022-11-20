@@ -1,5 +1,5 @@
-import 'package:bloc_td/core/master_detail_flow_provider.dart';
-import 'package:bloc_td/home/presentation/home_page.dart';
+import 'package:flutter_bloc_testdrive/core/master_detail_flow_provider.dart';
+import 'package:flutter_bloc_testdrive/home/presentation/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

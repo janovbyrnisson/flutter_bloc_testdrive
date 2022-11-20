@@ -1,6 +1,6 @@
 {
-    "name": "bloc_td",
-    "short_name": "bloc_td",
+    "name": "flutter_bloc_testdrive",
+    "short_name": "flutter_bloc_testdrive",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

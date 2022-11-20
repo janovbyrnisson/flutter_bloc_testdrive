@@ -4,10 +4,10 @@ project(runner LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "bloc_td")
+set(BINARY_NAME "flutter_bloc_testdrive")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.janovbyrnisson.bloc_td")
+set(APPLICATION_ID "com.janovbyrnisson.flutter_bloc_testdrive")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
