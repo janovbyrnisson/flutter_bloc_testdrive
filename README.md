@@ -1,6 +1,6 @@
 # flutter_bloc_testdrive
 
-![](../../../D:/App%20Projects/flutter_bloc_testdrive/home_screen.png)
+![](./home_screen.png)
 
 A test drive [Flutter BLoC](https://pub.dev/packages/flutter_bloc) project. Use it as a base for your project or as pure inspiration. It's a cross-platform *BLoC + Freezed + JSON & HTTP* example app.
 
