@@ -35,7 +35,7 @@ class ClientPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.menu),
+                        icon: const Icon(Icons.menu),
                         onPressed: () {
                           _.read<ClientPageCubit>().toggleMenu();
                         },
@@ -63,7 +63,7 @@ class ClientPage extends StatelessWidget {
                 child: Container(
                   color: Colors.purple,
                   child: Scaffold(
-                    backgroundColor: Colors.amber.shade100,
+                    backgroundColor: Colors.grey.shade50,
                     extendBody: true,
 
                     // Actionbar can be filled with actions
