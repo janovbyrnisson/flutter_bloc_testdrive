@@ -35,13 +35,13 @@ class MainMenu extends StatelessWidget {
               MenuButton(
                 label: "Home",
                 onPressed: () {
-                  // Navigate to home page widget - TBD
+                  Navigator.of(context).pushReplacementNamed("/home");
                 },
               ),
               MenuButton(
                 label: "Settings",
                 onPressed: () {
-                  // Navigate to settings page widget - TBD
+                  Navigator.of(context).pushReplacementNamed("/settings");
                 },
               ),
               MenuButton(
