@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'home_page_state.dart';
+part of 'home_page_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,6 +13,212 @@ T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+mixin _$HomePageEvent {
+  int get numOfCards => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int numOfCards) getCards,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int numOfCards)? getCards,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int numOfCards)? getCards,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomePageGetCards value) getCards,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomePageGetCards value)? getCards,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomePageGetCards value)? getCards,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomePageEventCopyWith<HomePageEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HomePageEventCopyWith<$Res> {
+  factory $HomePageEventCopyWith(
+          HomePageEvent value, $Res Function(HomePageEvent) then) =
+      _$HomePageEventCopyWithImpl<$Res, HomePageEvent>;
+  @useResult
+  $Res call({int numOfCards});
+}
+
+/// @nodoc
+class _$HomePageEventCopyWithImpl<$Res, $Val extends HomePageEvent>
+    implements $HomePageEventCopyWith<$Res> {
+  _$HomePageEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? numOfCards = null,
+  }) {
+    return _then(_value.copyWith(
+      numOfCards: null == numOfCards
+          ? _value.numOfCards
+          : numOfCards // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$HomePageGetCardsCopyWith<$Res>
+    implements $HomePageEventCopyWith<$Res> {
+  factory _$$HomePageGetCardsCopyWith(
+          _$HomePageGetCards value, $Res Function(_$HomePageGetCards) then) =
+      __$$HomePageGetCardsCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int numOfCards});
+}
+
+/// @nodoc
+class __$$HomePageGetCardsCopyWithImpl<$Res>
+    extends _$HomePageEventCopyWithImpl<$Res, _$HomePageGetCards>
+    implements _$$HomePageGetCardsCopyWith<$Res> {
+  __$$HomePageGetCardsCopyWithImpl(
+      _$HomePageGetCards _value, $Res Function(_$HomePageGetCards) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? numOfCards = null,
+  }) {
+    return _then(_$HomePageGetCards(
+      null == numOfCards
+          ? _value.numOfCards
+          : numOfCards // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomePageGetCards implements HomePageGetCards {
+  const _$HomePageGetCards(this.numOfCards);
+
+  @override
+  final int numOfCards;
+
+  @override
+  String toString() {
+    return 'HomePageEvent.getCards(numOfCards: $numOfCards)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomePageGetCards &&
+            (identical(other.numOfCards, numOfCards) ||
+                other.numOfCards == numOfCards));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, numOfCards);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomePageGetCardsCopyWith<_$HomePageGetCards> get copyWith =>
+      __$$HomePageGetCardsCopyWithImpl<_$HomePageGetCards>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int numOfCards) getCards,
+  }) {
+    return getCards(numOfCards);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int numOfCards)? getCards,
+  }) {
+    return getCards?.call(numOfCards);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int numOfCards)? getCards,
+    required TResult orElse(),
+  }) {
+    if (getCards != null) {
+      return getCards(numOfCards);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomePageGetCards value) getCards,
+  }) {
+    return getCards(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomePageGetCards value)? getCards,
+  }) {
+    return getCards?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomePageGetCards value)? getCards,
+    required TResult orElse(),
+  }) {
+    if (getCards != null) {
+      return getCards(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomePageGetCards implements HomePageEvent {
+  const factory HomePageGetCards(final int numOfCards) = _$HomePageGetCards;
+
+  @override
+  int get numOfCards;
+  @override
+  @JsonKey(ignore: true)
+  _$$HomePageGetCardsCopyWith<_$HomePageGetCards> get copyWith =>
+      throw _privateConstructorUsedError;
+}
 
 /// @nodoc
 mixin _$HomePageState {
@@ -43,7 +249,7 @@ mixin _$HomePageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomePageIntial value) initial,
+    required TResult Function(_HomePageIntial value) initial,
     required TResult Function(HomePageLoading value) loading,
     required TResult Function(HomePageError value) error,
     required TResult Function(HomePageSuccess value) success,
@@ -51,7 +257,7 @@ mixin _$HomePageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomePageIntial value)? initial,
+    TResult? Function(_HomePageIntial value)? initial,
     TResult? Function(HomePageLoading value)? loading,
     TResult? Function(HomePageError value)? error,
     TResult? Function(HomePageSuccess value)? success,
@@ -59,7 +265,7 @@ mixin _$HomePageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomePageIntial value)? initial,
+    TResult Function(_HomePageIntial value)? initial,
     TResult Function(HomePageLoading value)? loading,
     TResult Function(HomePageError value)? error,
     TResult Function(HomePageSuccess value)? success,
@@ -87,25 +293,25 @@ class _$HomePageStateCopyWithImpl<$Res, $Val extends HomePageState>
 }
 
 /// @nodoc
-abstract class _$$HomePageIntialCopyWith<$Res> {
-  factory _$$HomePageIntialCopyWith(
-          _$HomePageIntial value, $Res Function(_$HomePageIntial) then) =
-      __$$HomePageIntialCopyWithImpl<$Res>;
+abstract class _$$_HomePageIntialCopyWith<$Res> {
+  factory _$$_HomePageIntialCopyWith(
+          _$_HomePageIntial value, $Res Function(_$_HomePageIntial) then) =
+      __$$_HomePageIntialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$HomePageIntialCopyWithImpl<$Res>
-    extends _$HomePageStateCopyWithImpl<$Res, _$HomePageIntial>
-    implements _$$HomePageIntialCopyWith<$Res> {
-  __$$HomePageIntialCopyWithImpl(
-      _$HomePageIntial _value, $Res Function(_$HomePageIntial) _then)
+class __$$_HomePageIntialCopyWithImpl<$Res>
+    extends _$HomePageStateCopyWithImpl<$Res, _$_HomePageIntial>
+    implements _$$_HomePageIntialCopyWith<$Res> {
+  __$$_HomePageIntialCopyWithImpl(
+      _$_HomePageIntial _value, $Res Function(_$_HomePageIntial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$HomePageIntial implements HomePageIntial {
-  const _$HomePageIntial();
+class _$_HomePageIntial implements _HomePageIntial {
+  const _$_HomePageIntial();
 
   @override
   String toString() {
@@ -115,7 +321,7 @@ class _$HomePageIntial implements HomePageIntial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HomePageIntial);
+        (other.runtimeType == runtimeType && other is _$_HomePageIntial);
   }
 
   @override
@@ -161,7 +367,7 @@ class _$HomePageIntial implements HomePageIntial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomePageIntial value) initial,
+    required TResult Function(_HomePageIntial value) initial,
     required TResult Function(HomePageLoading value) loading,
     required TResult Function(HomePageError value) error,
     required TResult Function(HomePageSuccess value) success,
@@ -172,7 +378,7 @@ class _$HomePageIntial implements HomePageIntial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomePageIntial value)? initial,
+    TResult? Function(_HomePageIntial value)? initial,
     TResult? Function(HomePageLoading value)? loading,
     TResult? Function(HomePageError value)? error,
     TResult? Function(HomePageSuccess value)? success,
@@ -183,7 +389,7 @@ class _$HomePageIntial implements HomePageIntial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomePageIntial value)? initial,
+    TResult Function(_HomePageIntial value)? initial,
     TResult Function(HomePageLoading value)? loading,
     TResult Function(HomePageError value)? error,
     TResult Function(HomePageSuccess value)? success,
@@ -196,8 +402,8 @@ class _$HomePageIntial implements HomePageIntial {
   }
 }
 
-abstract class HomePageIntial implements HomePageState {
-  const factory HomePageIntial() = _$HomePageIntial;
+abstract class _HomePageIntial implements HomePageState {
+  const factory _HomePageIntial() = _$_HomePageIntial;
 }
 
 /// @nodoc
@@ -275,7 +481,7 @@ class _$HomePageLoading implements HomePageLoading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomePageIntial value) initial,
+    required TResult Function(_HomePageIntial value) initial,
     required TResult Function(HomePageLoading value) loading,
     required TResult Function(HomePageError value) error,
     required TResult Function(HomePageSuccess value) success,
@@ -286,7 +492,7 @@ class _$HomePageLoading implements HomePageLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomePageIntial value)? initial,
+    TResult? Function(_HomePageIntial value)? initial,
     TResult? Function(HomePageLoading value)? loading,
     TResult? Function(HomePageError value)? error,
     TResult? Function(HomePageSuccess value)? success,
@@ -297,7 +503,7 @@ class _$HomePageLoading implements HomePageLoading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomePageIntial value)? initial,
+    TResult Function(_HomePageIntial value)? initial,
     TResult Function(HomePageLoading value)? loading,
     TResult Function(HomePageError value)? error,
     TResult Function(HomePageSuccess value)? success,
@@ -415,7 +621,7 @@ class _$HomePageError implements HomePageError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomePageIntial value) initial,
+    required TResult Function(_HomePageIntial value) initial,
     required TResult Function(HomePageLoading value) loading,
     required TResult Function(HomePageError value) error,
     required TResult Function(HomePageSuccess value) success,
@@ -426,7 +632,7 @@ class _$HomePageError implements HomePageError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomePageIntial value)? initial,
+    TResult? Function(_HomePageIntial value)? initial,
     TResult? Function(HomePageLoading value)? loading,
     TResult? Function(HomePageError value)? error,
     TResult? Function(HomePageSuccess value)? success,
@@ -437,7 +643,7 @@ class _$HomePageError implements HomePageError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomePageIntial value)? initial,
+    TResult Function(_HomePageIntial value)? initial,
     TResult Function(HomePageLoading value)? loading,
     TResult Function(HomePageError value)? error,
     TResult Function(HomePageSuccess value)? success,
@@ -565,7 +771,7 @@ class _$HomePageSuccess implements HomePageSuccess {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(HomePageIntial value) initial,
+    required TResult Function(_HomePageIntial value) initial,
     required TResult Function(HomePageLoading value) loading,
     required TResult Function(HomePageError value) error,
     required TResult Function(HomePageSuccess value) success,
@@ -576,7 +782,7 @@ class _$HomePageSuccess implements HomePageSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomePageIntial value)? initial,
+    TResult? Function(_HomePageIntial value)? initial,
     TResult? Function(HomePageLoading value)? loading,
     TResult? Function(HomePageError value)? error,
     TResult? Function(HomePageSuccess value)? success,
@@ -587,7 +793,7 @@ class _$HomePageSuccess implements HomePageSuccess {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomePageIntial value)? initial,
+    TResult Function(_HomePageIntial value)? initial,
     TResult Function(HomePageLoading value)? loading,
     TResult Function(HomePageError value)? error,
     TResult Function(HomePageSuccess value)? success,

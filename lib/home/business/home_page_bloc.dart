@@ -1,7 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_testdrive/home/business/home_page_event.dart';
-import 'package:flutter_bloc_testdrive/home/business/home_page_state.dart';
 import 'package:flutter_bloc_testdrive/home/data/jokes_repository.dart';
+import 'package:flutter_bloc_testdrive/home/domain/joke.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'home_page_bloc.freezed.dart';
+part 'home_page_event.dart';
+part 'home_page_state.dart';
 
 //----------------------------------------------------------------------------------------------------------------------
 //
@@ -16,8 +20,8 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   //--------------------------------------------------------------------------------------------------------------------
 
   ///
-  HomePageBloc(this.jokesRepo) : super(const HomePageState.initial()) {
-    on<HomePageGetCards>((event, emit) => _loadNewCards(emit));
+  HomePageBloc(this.jokesRepo) : super(const _HomePageIntial()) {
+    on<HomePageGetCards>((event, emit) => _loadNewCards(event, emit));
   }
 
   //--------------------------------------------------------------------------------------------------------------------
@@ -30,10 +34,11 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   //  Event Handler Methods
   //--------------------------------------------------------------------------------------------------------------------
 
-  Future _loadNewCards(Emitter<HomePageState> emit) async {
+  Future _loadNewCards(
+      HomePageGetCards event, Emitter<HomePageState> emit) async {
     emit(const HomePageState.loading());
     try {
-      final jokes = await jokesRepo.fetchJokes(count: 5);
+      final jokes = await jokesRepo.fetchJokes(count: event.numOfCards);
       emit(HomePageState.success(jokes));
     } catch (e) {
       emit(

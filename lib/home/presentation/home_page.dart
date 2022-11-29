@@ -1,10 +1,9 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_testdrive/home/business/home_page_bloc.dart';
-import 'package:flutter_bloc_testdrive/home/business/home_page_event.dart';
-import 'package:flutter_bloc_testdrive/home/business/home_page_state.dart';
 import 'package:flutter_bloc_testdrive/home/data/jokes_repository.dart';
 import 'package:flutter_bloc_testdrive/home/domain/joke.dart';
+import 'package:flutter_bloc_testdrive/settings/business/bloc/settings_page_bloc.dart';
 import 'package:flutter_bloc_testdrive/shared/presentation/client_page.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +33,8 @@ class HomePage extends StatelessWidget {
   //--------------------------------------------------------------------------------------------------------------------
 
   void getCards(BuildContext context) {
-    context.read<HomePageBloc>().add(const HomePageEvent.getCards());
+    context.read<HomePageBloc>().add(HomePageEvent.getCards(
+        context.read<SettingsPageBloc>().state.numberOfCards));
   }
 
   //--------------------------------------------------------------------------------------------------------------------
@@ -45,8 +45,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClientPage(
       child: BlocProvider(
-        create: (context) =>
-            HomePageBloc(JokesRepo())..add(const HomePageEvent.getCards()),
+        create: (context) => HomePageBloc(JokesRepo())
+          ..add(HomePageEvent.getCards(
+              context.read<SettingsPageBloc>().state.numberOfCards)),
         child: BlocBuilder<HomePageBloc, HomePageState>(
           builder: (context, state) {
             return Column(

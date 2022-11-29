@@ -1,8 +1,6 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'home_page_event.freezed.dart';
+part of 'home_page_bloc.dart';
 
 @freezed
 class HomePageEvent with _$HomePageEvent {
-  const factory HomePageEvent.getCards() = HomePageGetCards;
+  const factory HomePageEvent.getCards(int numOfCards) = HomePageGetCards;
 }
